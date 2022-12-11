@@ -4,13 +4,13 @@ import {useState , useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { useNavigate } from "react-router-dom";
 import { Loginfun } from "../redux/auth/auth.actions";
-import { store } from "../redux/store";
+
 
 const Login = () => {
 
   const [crerd,setCread]=useState({})
 
-  const {isAuthenticated}=useSelector((store)=>store.AuthManager)
+  const {isAuthenticated} =useSelector((store)=>store.AuthManager)
   const dispatch=useDispatch()
   const navigate=useNavigate()
    
@@ -36,8 +36,6 @@ const Login = () => {
     if(isAuthenticated){
       navigate("/")
     }
-
-
   },[isAuthenticated])
 
   return (
