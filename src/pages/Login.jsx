@@ -9,10 +9,10 @@ import { Loginfun } from "../redux/auth/auth.actions";
 const Login = () => {
 
   const [crerd,setCread]=useState({})
-
+ const Navigate=useNavigate()
   const {isAuthenticated} =useSelector((store)=>store.AuthManager)
   const dispatch=useDispatch()
-  const Navigate=useNavigate()
+ 
    
   const handleChenge=(e)=>{
     const {name,value}=e.target
@@ -36,7 +36,7 @@ const Login = () => {
     if(isAuthenticated){
       Navigate("/")
     }
-  },[isAuthenticated])
+  },[])
 
   return (
     <div>
