@@ -12,7 +12,7 @@ const Login = () => {
 
   const {isAuthenticated} =useSelector((store)=>store.AuthManager)
   const dispatch=useDispatch()
-  const navigate=useNavigate()
+  const Navigate=useNavigate()
    
   const handleChenge=(e)=>{
     const {name,value}=e.target
@@ -34,7 +34,7 @@ const Login = () => {
 
   useEffect(()=>{
     if(isAuthenticated){
-      navigate("/")
+      Navigate("/")
     }
   },[isAuthenticated])
 
