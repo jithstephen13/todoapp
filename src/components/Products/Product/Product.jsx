@@ -10,7 +10,7 @@ const Product = ({id,name,description}) => {
    const count=0
     dispatch(AddCart({
       producyId:id,
-      cont:c
+      cont:count
     }))
 
   }
