@@ -35,6 +35,4 @@ export const productReducer = (state = productInitalState,{type,payload}) => {
     }
   }
 
-
-  return state;
 };
