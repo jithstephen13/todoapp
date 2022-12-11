@@ -10,7 +10,7 @@ export const Loginfun=(crerd)=>async(dispatch)=>{
     dispatch({type:types.AUTH_SIGN_IN_LOADING})
 
     try {
-     let res= await axios.post("https://reqres.in/api/login",crerd) 
+     let res = await axios.post('https://reqres.in/api/login',crerd) 
      console.log(res.data.token)
      dispatch({type:types.AUTH_SIGN_IN_SUCCESS,payload:res.data.token}) 
         
