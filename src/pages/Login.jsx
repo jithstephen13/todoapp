@@ -36,7 +36,7 @@ const Login = () => {
     if(isAuthenticated){
       Navigate("/")
     }
-  },[])
+  },[isAuthenticated])
 
   return (
     <div>
