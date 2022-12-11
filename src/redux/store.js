@@ -15,15 +15,15 @@ const rootReducer=combineReducers({
 })
 const composer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const logger=(store)=>next =>
-action => {
+// const logger=(store)=>next =>
+// action => {
 
-  if (typeof action === 'function') {
-    action(store.dispatch).then(next)
-  }
+//   if (typeof action === 'function') {
+//     action(store.dispatch).then(next)
+//   }
 
-  return next(action)
-}
+//   return next(action)
+// }
 
 export const store = legacy_createStore(rootReducer,composer(applyMiddleware(thunk)));
 // NOTE: Do not remove this code,its used for calculating your score, if removed it will give you zero marks
